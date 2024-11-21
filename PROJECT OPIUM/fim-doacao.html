@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Confirmação de Pedido</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background-color: black;
+      color: white;
+      font-family: 'Poppins', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    .container-principal {
+      text-align: center;
+      width: 100%;
+      max-width: 520px;
+      padding: 40px;
+      background-color: #000000;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    }
+    .secao-confirmacao .texto {
+      font-size: 30px;
+      font-weight: 500;
+      margin-bottom: 20px;
+    }
+    .doar-mais, .voltar {
+      background-color: #474747;
+      color: #f3f3f3;
+      font-size: 16px;
+      font-weight: 700;
+      padding: 15px 30px;
+      border-radius: 8px;
+      cursor: pointer;
+      width: fit-content;
+      margin: 0 auto;
+      margin-bottom: 20px;
+      transition: transform 0.3s ease, background-color 0.3s ease;
+    }
+    .doar-mais:hover, .voltar:hover {
+      transform: scale(1.1);
+      background-color: #696969;
+    }
+  </style>
+</head>
+<body>
+  <div class="container-principal">
+    <div class="secao-confirmacao">
+      <p class="texto" id="pedido-texto">Pedido Confirmado</p>
+    </div>
+    <div class="doar-mais" onclick="doarMais()">
+      Deseja doar mais?
+    </div>
+    <div class="voltar" onclick="voltarParaPaginaPadrao()">
+      Voltar para a página inicial
+    </div>
+  </div>
+
+  <script>
+    function gerarNumeroPedido() {
+      const caracteres = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
+      let numeroPedido = '';
+      for (let i = 0; i < 12; i++) {
+        const randomIndex = Math.floor(Math.random() * caracteres.length);
+        numeroPedido += caracteres[randomIndex];
+      }
+      return numeroPedido;
+    }
+
+    document.getElementById('pedido-texto').innerText = `Pedido #${gerarNumeroPedido()} Confirmado`;
+
+    function doarMais() {
+      window.location.href = 'pagamentodoacao.html'; 
+    }
+
+    function voltarParaPaginaPadrao() {
+      window.location.href = 'doacaopag.html'; 
+    }
+  </script>
+</body>
+</html>

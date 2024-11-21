@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contato - Opium</title>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap');
+
+    body {
+        margin: 0;
+        font-family: "Poppins", sans-serif;
+        font-weight: 400; /* Poppins Regular */
+        font-style: normal;
+        background-color: black;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+    }
+
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: white;
+        padding: 0.1px 15px;
+        border-bottom: 2px solid white;
+        width: 100%;
+    }
+
+    .user-info {
+        font-size: 14px;
+        color: black;
+        text-align: right;
+        margin-left: auto; /* Alinha para a direita */
+    }
+
+    .user-info a {
+        color: black; /* Define a cor preta para o link */
+        text-decoration: none; /* Remove sublinhado */
+    }
+
+    nav {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: black;
+        padding: 20px 0;
+        width: 100%;
+    }
+
+    .menu {
+        display: grid;
+        grid-template-columns: repeat(15, auto);
+        justify-content: center;
+        align-items: center;
+        gap: 60px;
+    }
+
+    .menu a {
+        text-decoration: none;
+        color: white;
+        font-size: 16px;
+        font-weight: 400; /* Poppins Regular */
+    }
+
+    .filho1 { grid-column: 2; }
+    .filho2 { grid-column: 4; }
+    .filho3 { grid-column: 6; }
+    .logo { grid-column: 8; }
+    .filho4 { grid-column: 10; }
+    .filho5 { grid-column: 12; }
+    .filho6 { grid-column: 14; }
+
+    .logo img {
+        width: 120px;
+        height: auto;
+    }
+
+    .contact-form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        max-width: 400px;
+        padding: 20px;
+        background-color: #000000;
+        border-radius: 10px;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+        text-align: center;
+    }
+
+    .contact-form textarea {
+        width: 100%;
+        min-height: 40px;
+        max-height: 96px; 
+        padding: 10px;
+        font-size: 16px;
+        color: #fff;
+        background-color: #312f2f;
+        border: none;
+        border-radius: 5px;
+        resize: none; 
+        overflow: hidden; 
+        box-sizing: border-box;
+        line-height: 1.5em; 
+        font-family: "Poppins", sans-serif;
+        transition: height 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .contact-form textarea:focus {
+        outline: none;
+        box-shadow: 0 0 5px rgba(255, 255, 255, 0.7); 
+    }
+
+    .contact-form button {
+        width: 100%;
+        padding: 10px;
+        font-size: 16px;
+        background-color: #444;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        margin-top: 10px;
+    }
+
+    .contact-form button:hover {
+        background-color: #000000;
+    }
+
+    .confirmation-message {
+        font-size: 18px;
+        line-height: 1.6;
+        color: #fff;
+        text-align: center;
+        padding: 20px;
+        background-color: #1c1c1c;
+        border-radius: 10px;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+        max-width: 400px;
+    }
+
+    .confirmation-message button {
+        margin-top: 20px;
+        padding: 10px 20px;
+        font-size: 16px;
+        background-color: #444;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    .confirmation-message button:hover {
+        background-color: #666;
+    }
+
+    .contact-info {
+        font-size: 16px;
+        color: #fff;
+        text-align: center;
+        margin-top: 30px;
+        background-color: #000000;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0px 4px 10px rgba(54, 46, 46, 0.5);
+        max-width: 500px;
+        width: 100%;
+    }
+
+    .contact-info p {
+        margin: 5px 0;
+    }
+</style>
+</head>
+<body>
+    <header>
+        <div class="user-info">
+            <p><a href="Login_escolha.html">Olá, Faça seu login!</a><br><strong>Sua conta e doações.</strong></p>
+        </div>
+    </header>
+    <nav>
+        <div class="menu">
+            <a class="filho1" href="pagina_ajuda.html">AJUDA</a>
+            <a class="filho2" href="pagina_ranking.html">RANKING</a>
+            <a class="filho3" href="pagina_combatendo.html">COMBATENDO</a>
+            <div class="logo">
+                <img src="OPIUM.png" alt="Logo">
+            </div>
+            <a class="filho4" href="pagina_merchandising.html">MERCHANDISING</a>
+            <a class="filho5" href="pagina_doacao.html">DOAÇÃO</a>
+            <a class="filho6" href="pagina_sobre.html">SOBRE</a>
+        </div>
+    </nav>
+
+    <div id="contactContainer" class="contact-form">
+        <h2>Está precisando de ajuda?</h2>
+        <p>Fale conosco</p>
+        <textarea id="dynamicTextarea" placeholder="Escreva sua mensagem"></textarea>
+        <button id="sendButton">Enviar</button>
+    </div>
+    
+    <div class="contact-info">
+        <h3>Outras formas de contato</h3>
+        <p>E-Mail - suporteaocliente@opium.com</p>
+        <p>WhatsApp - (11) 91597 - 5714</p>
+        <p>SAC - 0800 - 3423</p>
+        <p>Localização - Jardim Panorama, rua Israel, Salto-SP</p>
+    </div>
+
+    <script>
+        const textarea = document.getElementById('dynamicTextarea');
+        const sendButton = document.getElementById('sendButton');
+        const contactContainer = document.getElementById('contactContainer');
+        const lineHeight = 24; 
+        const maxLines = 4; 
+        const maxHeight = lineHeight * maxLines; 
+        textarea.addEventListener('input', () => {
+            textarea.style.height = 'auto'; 
+            const newHeight = textarea.scrollHeight;
+
+            if (newHeight <= maxHeight) {
+                textarea.style.height = `${newHeight}px`;
+            } else {
+                textarea.style.height = `${maxHeight}px`; 
+            }
+        });
+
+        sendButton.addEventListener('click', () => {
+            contactContainer.innerHTML = `
+                <div class="confirmation-message">
+                    <p>Reclamação recebida, iremos analisar sua mensagem e retornaremos em breve!</p>
+                    <button id="homeButton">Voltar à Homepage</button>
+                </div>
+            `;
+
+            const homeButton = document.getElementById('homeButton');
+            homeButton.addEventListener('click', () => {
+                window.location.href = 'PAGINA.HTML'; // Substitua '/' pelo link da homepage
+            });
+        });
+    </script>
+</body>
+</html>
