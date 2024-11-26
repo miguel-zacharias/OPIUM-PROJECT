@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro_pessoal</title>
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap');
+        body {
+            margin: 0;
+            font-family: "Poppins", sans-serif;
+            font-weight: 400; /* Poppins Regular */
+            font-style: normal;
+            background-color: black;
+            color: white;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: white;
+            padding: 0.1px 15px;
+            border-bottom: 2px solid white;
+        }
+
+        .user-info {
+            font-size: 14px;
+            color: black;
+            text-align: right;
+            margin-left: auto; /* Alinha para a direita */
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: black;
+            padding: 20px 0;
+            width: 100%;
+        }
+
+        .menu {
+            display: grid;
+            grid-template-columns: repeat(15,auto);
+            justify-content: center;
+            align-items: center;
+            gap: 60px; /* Espaçamento maior entre os itens */
+        }
+
+        .menu a {
+            text-decoration: none;
+            color: white;
+            font-size: 16px;
+            font-weight: 400; /* Poppins Regular */
+        }
+
+        .filho1{
+            grid-column: 2;
+        }
+        .filho2{
+            grid-column: 4;
+        }
+        .filho3{
+            grid-column: 6;
+        }
+        .logo{
+            grid-column: 8;
+        }
+        .filho4{
+            grid-column: 10;
+        }
+        .filho5{
+            grid-column: 12;
+        }
+        .filho6{
+            grid-column: 14;
+        }
+
+        .logo img {
+            width: 100px; /* Ajuste da altura da logo */
+            height: auto;
+        }
+        a {
+            text-decoration: none;
+        }
+        .cadastro {
+            grid-template-columns: repeat(2,auto);
+        }
+        img {
+            z-index: 0;
+        }
+        h4 {
+            z-index: 1;
+        }
+        h2 {
+            z-index: 1;
+        }
+        input[type="checkbox"] {
+            display: none;
+        }
+        .checkbox {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            background-color: #ffffff;
+            border-radius: 5px;
+            cursor: pointer;
+            position: relative;
+        }
+        input[type="checkbox"]:checked + label {
+            background-color: #474747;
+        }
+        input[type="checkbox"]:checked + label::after {
+            content: "✓";
+            color: white;
+            font-size: 16px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .nome {
+            width: 300px;
+            height: 5px;
+            background-color: #202020;
+            padding: 20px;
+            z-index: 1;
+            border-radius: 10px;
+            border-color: #666666;
+            color: #666666;
+        }
+        .sobrenome {
+            width: 300px;
+            height: 5px;
+            background-color: #202020;
+            padding: 20px;
+            z-index: 1;
+            border-radius: 10px;
+            border-color: #666666;
+            color: #666666;
+        }
+        .e-mail {
+            width: 300px;
+            height: 5px;
+            background-color: #202020;
+            padding: 20px;
+            z-index: 1;
+            border-radius: 10px;
+            border-color: #666666;
+            color: #666666;
+        }
+        .telefone {
+            width: 300px;
+            height: 5px;
+            background-color: #202020;
+            padding: 20px;
+            z-index: 1;
+            border-radius: 10px;
+            border-color: #666666;
+            color: #666666;
+        }
+        .senha {
+            width: 300px;
+            height: 5px;
+            background-color: #202020;
+            padding: 20px;
+            z-index: 1;
+            border-radius: 10px;
+            border-color: #666666;
+            color: #666666;
+        }
+        .button {
+            width: 300px;
+            height: 3px;
+            padding: 20px;
+            z-index: 1;
+            background-color: #111111;
+            border-radius: 50px;
+            cursor: pointer;
+            font-size: 10px;
+        }
+        .caixa {
+            width: 50%;
+            height: 1100px;
+            background-color: #202020;
+            padding: 20px;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            z-index: 0;
+            border-radius: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="user-info">
+            <p><a href="Login_escolha.html">Olá, Faça seu login!</a><br><strong>Sua conta e doações.</strong></p>
+        </div>
+    </header>
+    <nav>
+        <div class="menu">
+            <a class="filho1" href="#">AJUDA</a>
+            <a class="filho2" href="#">RANKING</a>
+            <a class="filho3" href="#">COMBATENDO</a>
+            <div class="logo">
+                <img src="Design sem nome (13).png" alt="Logo">
+            </div>
+            <a class="filho4" href="#">MERCHANDISING</a>
+            <a class="filho5" href="#">DOAÇÃO</a>
+            <a class="filho6" href="#">SOBRE</a>
+        </div>
+    </nav>
+    <nav>
+        <div class="cadastro">
+            <div class="texto">
+                <h2>Cadastro pessoal<br></h2>
+                <h4>Acesse nossos textos sobre a conscientização do tema,<br> além de nossa loja e doação.</h4>
+                <img src="Design sem nome (13).png" alt="Logo">
+            </div>
+        </div>
+        <div class="caixa">
+            <p><br></p>
+            <h2>Cadastre sua conta:</h2>
+            <p><br></p>
+            <p><br></p>
+            <label for="nome">Nome<br></label>
+            <input class="nome" type="text" id="nome" name="nome" placeholder=""><br>
+            <label for="sobrenome">Sobrenome<br></label>
+            <input class="sobrenome" type="text" id="sobrenome" name="sobrenome" placeholder="">
+            <p><br></p>
+            <label for="e-mail">Endereço de E-mail<br></label>
+            <input class="e-mail" type="text" id="e-mail" name="e-mail" placeholder="name@example.com"><br>
+            <p><br></p>
+            <label for="telefone">Número de telefone<br></label>
+            <input class="telefone" type="text" id="telefone" name="telefone" placeholder="(dd)xxxxx-xxxx"><br>
+            <p><br></p>
+            <label for="senha">Senha<br></label>
+            <input class="senha" type="password" id="senha" name="senha" placeholder="********"><br>
+            <h6>Utilize: <br>-Ao menos 8 caracteres;<br>-Uma letra maiúscula e uma minúscula;<br>-Um número e um caractére especial.</h6>
+            <p><br></p>
+            <a href="#" class="button">Next</a>
+            <p><br></p>
+            <input type="checkbox" id="customCheckbox" required>
+            <label class="checkbox" for="customCheckbox"></label>
+            <h6>Ao criar a conta, eu concordo com os <a href="">Termos de Uso</a> e com a <a href="">Política de privacidade</a>.<br></h6>
+            <h6>Caso já tenha uma conta, clique <a href="login_pessoal.html">aqui</a> para fazer o login.</h6>
+        </div>
+    </nav>
+</body>
+</html>

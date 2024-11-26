@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login_escolha</title>
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap');
+        body {
+            margin: 0;
+            font-family: "Poppins", sans-serif;
+            font-weight: 400; /* Poppins Regular */
+            font-style: normal;
+            background-color: black;
+            color: white;
+            align-items: center;
+        }
+
+        .caixa {
+            width: 50%;
+            height: 650px;
+            background-color: #202020;
+            padding: 20px;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            z-index: 0;
+            border-radius: 20px;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: right;
+            background-color: white;
+            padding: 0.1px 15px;
+            border-bottom: 2px solid white;
+        }
+
+        .user-info {
+            font-size: 14px;
+            color: black;
+            text-align: right;
+            margin-left: auto; /* Alinha para a direita */
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: black;
+            padding: 20px 0;
+            width: 100%;
+        }
+
+        .menu {
+            display: grid;
+            grid-template-columns: repeat(15,auto);
+            justify-content: center;
+            align-items: center;
+            gap: 60px; /* Espaçamento maior entre os itens */
+        }
+
+        .menu a {
+            text-decoration: none;
+            color: white;
+            font-size: 16px;
+            font-weight: 400; /* Poppins Regular */
+        }
+
+        .filho1{
+            grid-column: 2;
+        }
+        .filho2{
+            grid-column: 4;
+        }
+        .filho3{
+            grid-column: 6;
+        }
+        .logo{
+            grid-column: 8;
+        }
+        .filho4{
+            grid-column: 10;
+        }
+        .filho5{
+            grid-column: 12;
+        }
+        .filho6{
+            grid-column: 14;
+        }
+
+        .logo img {
+            width: 100px; /* Ajuste da altura da logo */
+            height: auto;
+        }
+        .button {
+            background-color: #111111;
+            color: white;
+            padding: 2px 20px;
+            border: auto;
+            cursor: pointer;
+            font-size: 10px;
+            border-radius: 20px;
+            text-decoration: none;
+            margin-left: 250px;
+            text-align: center;
+            z-index: 1;
+        }
+
+
+    </style>
+</head>
+<body>    
+    <header>
+        <div class="user-info">
+            <p><a href="Login_escolha.html">Olá, Faça seu login!</a><br><strong>Sua conta e doações.</strong></p>
+        </div>
+    </header>
+  
+    <nav>
+        <div class="menu">
+            <a class="filho1" href="#">AJUDA</a>
+            <a class="filho2" href="#">RANKING</a>
+            <a class="filho3" href="#">COMBATENDO</a>
+            <div class="logo">
+                <img src="Design sem nome (13).png" alt="Logo">
+            </div>
+            <a class="filho4" href="#">MERCHANDISING</a>
+            <a class="filho5" href="#">DOAÇÃO</a>
+            <a class="filho6" href="#">SOBRE</a>
+        </div>
+    </nav>
+    
+    <nav>
+        <div class="caixa">
+            <h2>Deseja continuar o login/cadastro como
+                empresa ou como pessoal:</h2>
+            <p><br></p>
+            <h3>Login:</h3>
+            <div class="button">
+                <h4><a href="login_pessoal.html">Pessoal</a></h4>
+            </div>
+            <div class="button">
+                <h4><a href="Login_empresarial.html">Empresarial</a></h4>
+            </div>
+            <p><br></p>
+            <h3>Cadastro:</h3>
+            <div class="button">
+                <h4><a href="Cadastro_pessoal.html">Pessoal</a></h4>
+            </div>
+            <div class="button">
+                <h4><a href="Cadastro_empresarial.html">Empresarial</a></h4>
+            </div>
+            <p><br></p>
+            <p><br></p>
+            <div class="button">
+                <h4><a href="Login_administrador.html">Sou administrador</a></h4>
+            </div>
+
+        </div>
+    </nav>
+
+</body>
+</html>
