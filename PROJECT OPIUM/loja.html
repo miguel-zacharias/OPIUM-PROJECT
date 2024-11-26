@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loja de Roupas</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #000000; 
+            color: #ffffff; 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            overflow: hidden; 
+        }
+
+        #produtos {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr); 
+            gap: 20px; 
+            width: 90vw;
+            max-width: 800px; 
+        }
+
+        .produto {
+            background-color: #000000; 
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .produto:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.7);
+        }
+
+        .produto img {
+            width: 100%;
+            max-width: 150px; 
+            height: auto;
+            margin-bottom: 10px;
+            border-radius: 5px;
+        }
+
+        .produto h3 {
+            font-size: 16px;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: #e63946;
+        }
+
+        .produto p {
+            font-size: 14px;
+            color: #ffffff;
+        }
+
+        .btn-compra {
+            background-color: #000;
+            color: #e63946;
+            border: none;
+            padding: 8px 15px;
+            font-size: 14px;
+            font-weight: bold;
+            text-transform: uppercase;
+            margin-top: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .btn-compra:hover {
+            background-color: #e63946;
+            color: #fff;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <section id="produtos">
+        <div class="produto">
+            <img src="../SITE/MIDIA/Screenshot_1.png" alt="Camiseta de Time">
+            <h3>CAMISETA DE TIME</h3>
+            <p>R$ 82,00</p>
+            <button class="btn-compra">Comprar</button>
+        </div>
+        <div class="produto">
+            <img src="../SITE/MIDIA/Screenshot_2.png" alt="Camisa de Time Preta">
+            <h3>CAMISA DE TIME PRETA</h3>
+            <p>R$ 85,00</p>
+            <button class="btn-compra">Comprar</button>
+        </div>
+        <div class="produto">
+            <img src="../SITE/MIDIA/Screenshot_3.png" alt="Luva Last Forever">
+            <h3>LUVA LAST FOREVER</h3>
+            <p>R$ 40,00</p>
+            <button class="btn-compra">Comprar</button>
+        </div> 
+        <div class="produto">
+            <img src="../SITE/MIDIA/Screenshot_5.png" alt="Love Last Forever CD">
+            <h3>LOVE LAST FOREVER CD</h3>
+            <p>R$ 32,00</p>
+            <button class="btn-compra">Comprar</button>
+        </div>
+    </section>
+
+    <script>
+        const urlPagamento = "pagamento.html";
+
+        
+        const botoesCompra = document.querySelectorAll('.btn-compra');
+
+       
+        botoesCompra.forEach(botao => {
+            botao.addEventListener('click', () => {
+             
+                window.location.href = urlPagamento;
+            });
+        });
+    </script>
+</body>
+</html>

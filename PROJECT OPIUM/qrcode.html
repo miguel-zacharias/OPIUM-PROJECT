@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pagamento via QR Code - Opium</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: black;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      padding: 20px;
+    }
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-color: #292727;
+      border-radius: 10px;
+      padding: 30px;
+      width: 100%;
+      max-width: 500px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    }
+    .container h2 {
+      font-size: 24px;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    .container p {
+      font-size: 16px;
+      color: #aaa;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+    .qr-code {
+      width: 200px;
+      height: 200px;
+      margin-bottom: 30px;
+      background: url('images.png') center/cover no-repeat; 
+    }
+    .button {
+      background-color: #28a745;
+      color: white;
+      border: none;
+      padding: 15px;
+      font-size: 16px;
+      font-weight: bold;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+      width: 100%;
+    }
+    .button:hover {
+      background-color: #1e7e34;
+      transform: scale(1.05);
+    }
+    .info-text {
+      font-size: 14px;
+      color: #aaa;
+      margin-top: 20px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Pagamento via QR Code</h2>
+    <p>Escaneie o QR Code abaixo para completar o pagamento de forma rápida e segura.</p>
+    <div class="qr-code"></div>
+
+    <p class="info-text">Se você tiver problemas para escanear o QR Code, clique abaixo para tentar novamente.</p>
+
+    <button class="button" onclick="retryPayment()">Tentar Novamente</button>
+    
+    <div class="info-text">
+      <p>Ao escanear o QR Code, você será redirecionado para a plataforma de pagamento. Após a confirmação do pagamento, você será notificado. Caso haja qualquer problema, entre em contato com nosso suporte.</p>
+    </div>
+  </div>
+
+  <script>
+
+    function retryPayment() {
+      window.location.href = 'pagamento.html'; 
+    }
+
+   
+    setTimeout(function() {
+      window.location.href = 'confirmação.html'; 
+    }, 20000); 
+  </script>
+</body>
+</html>
