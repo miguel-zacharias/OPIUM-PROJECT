@@ -53,7 +53,7 @@
 <body>
   <div class="container-principal">
     <div class="secao-confirmacao">
-      <p class="texto" id="pedido-texto">Pedido Confirmado</p>
+      <p class="texto" id="pedido-texto">Doação: Confirmado</p>
     </div>
     <div class="doar-mais" onc  lick="doarMais()">
       Deseja doar mais?
@@ -74,7 +74,7 @@
       return numeroPedido;
     }
 
-    document.getElementById('pedido-texto').innerText = `Pedido #${gerarNumeroPedido()} Confirmado`;
+    document.getElementById('pedido-texto').innerText = `Doação #${gerarNumeroPedido()} Confirmado`;
 
     function doarMais() {
       window.location.href = 'pagamentodoacao.html'; 
