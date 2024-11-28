@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Processando Pagamento...</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: black;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      padding: 20px;
+    }
+    .loader-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.8);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+    }
+    .loader {
+      border: 10px solid #ffffff;
+      border-top: 10px solid #fefefe;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      animation: spin 2s linear infinite;
+    }
+
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-color: #292727;
+      border-radius: 10px;
+      padding: 30px;
+      width: 100%;
+      max-width: 500px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+      opacity: 0; 
+      transition: opacity 0.5s ease;
+    }
+    .container.show {
+      opacity: 1; 
+    }
+    .container h2 {
+      font-size: 24px;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    .container p {
+      font-size: 16px;
+      color: #aaa;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+    .check-icon {
+      font-size: 50px;
+      color: #28a745;
+      margin-bottom: 30px;
+    }
+    .button {
+      background-color: #28a745;
+      color: white;
+      border: none;
+      padding: 15px;
+      font-size: 16px;
+      font-weight: bold;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+      width: 100%;
+    }
+    .button:hover {
+      background-color: #1e7e34;
+      transform: scale(1.05);
+    }
+    .info-text {
+      font-size: 14px;
+      color: #aaa;
+      margin-top: 20px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  
+  <div class="loader-container" id="loader">
+    <div class="loader"></div>
+  </div>
+
+  
+  <div class="container" id="confirmationContainer">
+    <div class="check-icon">
+      &#10004; 
+    </div>
+    <h2>Pagamento Confirmado!</h2>
+    <p>Seu pagamento foi processado com sucesso.</p>
+    <p>Você receberá um e-mail com os detalhes da sua compra e o acompanhamento do status da entrega.</p>
+
+    <div class="info-text">
+      <p>Se você não receber o e-mail em breve, verifique sua caixa de spam ou entre em contato com o suporte.</p>
+    </div>
+
+    <button class="button" onclick="goHome()">Voltar para a página inicial</button>
+  </div>
+
+  <script>
+    
+    setTimeout(function() {
+   
+      document.getElementById("loader").style.display = "none";
+    
+      document.getElementById("confirmationContainer").classList.add("show");
+    }, 3000); 
+
+    
+    function goHome() {
+      window.location.href = 'PAGINA.html'; 
+    }
+  </script>
+</body>
+</html>

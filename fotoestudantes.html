@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Estudantes</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;800&display=swap" />
+    <style>
+      :root {
+        --default-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          Ubuntu, "Helvetica Neue", Helvetica, Arial, "PingFang SC",
+          "Hiragino Sans GB", "Microsoft Yahei UI", "Microsoft Yahei",
+          "Source Han Sans CN", sans-serif;
+      }
+
+      body, html {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        width: 100%;
+        background-color: #000000; /* Fundo preto */
+        color: white;
+        font-family: Poppins, var(--default-font-family); /* Fonte padrão */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .main-container {
+        max-width: 1200px;
+        width: 100%;
+        padding: 20px;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      /* Título */
+      .title {
+        font-size: 50px;
+        font-weight: 800;
+        color: #c7c7c7;
+        margin-bottom: 20px;
+        text-align: center;
+      }
+
+      /* Grade dos Estudantes */
+      .students-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* Dois por linha */
+        gap: 20px;
+        width: 100%;
+      }
+
+      .student-card {
+        background-color: #1e1e1e;
+        border-radius: 10px;
+        overflow: hidden;
+        text-align: center;
+        padding: 20px;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+      }
+
+      .student-photo {
+        width: 100%;
+        height: 250px;
+        object-fit: cover;
+        border-radius: 10px;
+        background-color: #333; /* Placeholder para foto */
+        margin-bottom: 10px;
+      }
+
+      .student-info {
+        margin-top: 10px;
+      }
+
+      .student-name {
+        font-size: 20px;
+        font-weight: 800;
+        color: #f77f00;
+        margin-top: 5px;
+      }
+
+      .upload-photo {
+        display: block;
+        margin: 0 auto;
+        padding: 8px 12px;
+        background-color: #f77f00;
+        color: white;
+        font-size: 14px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+
+      .upload-photo:hover {
+        background-color: #e06b00;
+      }
+
+      .file-input {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main-container">
+      <div class="title">Nossos Estudantes</div>
+      <div class="students-grid">
+        <!-- Estudante 1 -->
+        <div class="student-card">
+          <div class="student-photo" id="photo-1"></div>
+          <input type="file" id="file-1" class="file-input" accept="image/*" onchange="previewImage(event, 'photo-1')" />
+          <label for="file-1" class="upload-photo">Carregar Foto</label>
+          <div class="student-info">
+            <div class="student-name">Miguel Zacharias</div>
+          </div>
+        </div>
+
+        <!-- Estudante 2 -->
+        <div class="student-card">
+          <div class="student-photo" id="photo-2"></div>
+          <input type="file" id="file-2" class="file-input" accept="image/*" onchange="previewImage(event, 'photo-2')" />
+          <label for="file-2" class="upload-photo">Carregar Foto</label>
+          <div class="student-info">
+            <div class="student-name">Isabela Santos</div>
+          </div>
+        </div>
+
+        <!-- Estudante 3 -->
+        <div class="student-card">
+          <div class="student-photo" id="photo-3"></div>
+          <input type="file" id="file-3" class="file-input" accept="image/*" onchange="previewImage(event, 'photo-3')" />
+          <label for="file-3" class="upload-photo">Carregar Foto</label>
+          <div class="student-info">
+            <div class="student-name">Diego Alves</div>
+          </div>
+        </div>
+
+        <!-- Estudante 4 -->
+        <div class="student-card">
+          <div class="student-photo" id="photo-4"></div>
+          <input type="file" id="file-4" class="file-input" accept="image/*" onchange="previewImage(event, 'photo-4')" />
+          <label for="file-4" class="upload-photo">Carregar Foto</label>
+          <div class="student-info">
+            <div class="student-name">Guilherme Montes</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      function previewImage(event, photoId) {
+        const file = event.target.files[0];
+        if (file) {
+          const reader = new FileReader();
+          reader.onload = function (e) {
+            const photo = document.getElementById(photoId);
+            photo.style.backgroundImage = `url(${e.target.result})`;
+            photo.style.backgroundSize = "cover";
+            photo.style.backgroundPosition = "center";
+          };
+          reader.readAsDataURL(file);
+        }
+      }
+    </script>
+  </body>
+</html>

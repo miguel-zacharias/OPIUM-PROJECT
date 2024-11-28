@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SOBRE</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;800&display=swap" />
+    <style>
+      :root {
+        --default-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          Ubuntu, "Helvetica Neue", Helvetica, Arial, "PingFang SC",
+          "Hiragino Sans GB", "Microsoft Yahei UI", "Microsoft Yahei",
+          "Source Han Sans CN", sans-serif;
+      }
+
+      body, html {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        width: 100%;
+        overflow: hidden; /* Remove qualquer scroll */
+        background-color: #000000; /* Fundo preto */
+        color: white;
+        font-family: Poppins, var(--default-font-family); /* Fonte padrão */
+      }
+
+      .main-container {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between; /* Garante que o botão fique na parte inferior */
+        align-items: center;
+        padding: 15px; /* Reduzi o espaçamento interno */
+        box-sizing: border-box;
+      }
+
+      .wrapper {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center; /* Centraliza verticalmente */
+        align-items: center;
+        text-align: center;
+        width: 100%;
+      }
+
+      /* Título Quem Somos */
+      .quem-somos {
+        font-size: 60px;
+        font-weight: 800;
+        color: #c7c7c7;
+        margin: 0;
+      }
+
+      /* Descrição do Opium Group */
+      .opium-group {
+        font-size: 30px; /* Reduzi o tamanho ligeiramente */
+        font-weight: 400;
+        color: #797979;
+        margin: 20px 0;
+        max-width: 85%; /* Reduzi o espaço ocupado pelo texto */
+      }
+
+      .descarbonizacao {
+        font-weight: 800;
+      }
+
+      /* Biografia da Equipe */
+      .team {
+        font-size: 30px; /* Reduzi o tamanho ligeiramente */
+        font-weight: 800;
+        color: #c7c7c7;
+        margin: 15px 0;
+      }
+
+      .leader-miguel {
+        font-size: 28px; /* Reduzi o tamanho ligeiramente */
+        font-weight: 400;
+        color: #797979;
+        max-width: 85%; /* Reduzi o espaço ocupado pelo texto */
+        margin: 0;
+      }
+
+      /* Botão "Ver Estudantes" */
+      .view-students-btn {
+        padding: 10px 20px;
+        background-color: #524f4c;
+        color: white;
+        font-size: 16px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+
+      .view-students-btn:hover {
+        background-color: #e06b00;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main-container">
+      <div class="wrapper">
+        <!-- Título Quem Somos -->
+        <span class="quem-somos">QUEM SOMOS ?</span>
+
+        <!-- Descrição do Opium Group -->
+        <div class="opium-group">
+          A OPIUM Group nasceu no curso de Desenvolvimento de Sistemas no SENAI, onde se viu a necessidade de procurarmos auxiliar ao avanço da
+          <span class="descarbonizacao">descarbonização. </span>Como temos meios e medidas de avançarmos, decidimos implementar em empresas estes mesmos meios.
+        </div>
+
+        <!-- Biografia da Equipe -->
+        <span class="team">A EQUIPE</span>
+        <span class="leader-miguel">
+          Como líder, Miguel Zacharias desempenhou um papel produtivo e estratégico no projeto. Diego contribuiu com a criação do tema, sendo também co-criador das ideias principais, além da produção de paginas do site. Isabela foi responsável pela documentação detalhada do trabalho, garantindo organização e clareza. Guilherme Montes cuidou do desenvolvimento e gerenciamento dos logins, assegurando a funcionalidade técnica.
+        </span>
+      </div>
+
+      <!-- Botão "Ver Estudantes" -->
+      <button class="view-students-btn">Ver Estudantes</button>
+    </div>
+  </body>
+</html>
