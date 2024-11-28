@@ -3,10 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>SOBRE</title>
+    <title>Estudantes</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;800&display=swap" />
     <style>
-      
       :root {
         --default-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
           Ubuntu, "Helvetica Neue", Helvetica, Arial, "PingFang SC",
@@ -19,107 +18,152 @@
         padding: 0;
         height: 100%;
         width: 100%;
-        overflow: hidden; 
-        background-color: #000000; 
+        background-color: #000000; /* Fundo preto */
         color: white;
-        font-family: Poppins, var(--default-font-family); 
+        font-family: Poppins, var(--default-font-family); /* Fonte padrão */
+        display: flex;
+        justify-content: center;
+        align-items: center;
       }
 
       .main-container {
-        min-height: 100vh;
+        max-width: 1200px;
+        width: 100%;
+        padding: 20px;
+        box-sizing: border-box;
         display: flex;
         flex-direction: column;
-        justify-content: space-between; 
         align-items: center;
-        padding: 15px; 
-        box-sizing: border-box;
       }
 
-      .wrapper {
-        flex: 1;
-        display: flex;
-        flex-direction: column;
-        justify-content: center; 
-        align-items: center;
+      /* Título */
+      .title {
+        font-size: 50px;
+        font-weight: 800;
+        color: #c7c7c7;
+        margin-bottom: 20px;
         text-align: center;
+      }
+
+      /* Grade dos Estudantes */
+      .students-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* Dois por linha */
+        gap: 20px;
         width: 100%;
       }
 
-      
-      .quem-somos {
-        font-size: 60px;
+      .student-card {
+        background-color: #1e1e1e;
+        border-radius: 10px;
+        overflow: hidden;
+        text-align: center;
+        padding: 20px;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+      }
+
+      .student-photo {
+        width: 100%;
+        height: 250px;
+        object-fit: cover;
+        border-radius: 10px;
+        background-color: #333; /* Placeholder para foto */
+        margin-bottom: 10px;
+      }
+
+      .student-info {
+        margin-top: 10px;
+      }
+
+      .student-name {
+        font-size: 20px;
         font-weight: 800;
-        color: #c7c7c7;
-        margin: 0;
+        color: #f77f00;
+        margin-top: 5px;
       }
 
-      
-      .opium-group {
-        font-size: 30px; 
-        font-weight: 400;
-        color: #797979;
-        margin: 20px 0;
-        max-width: 85%; 
-      }
-
-      .descarbonizacao {
-        font-weight: 800;
-      }
-
-      
-      .team {
-        font-size: 30px; 
-        font-weight: 800;
-        color: #c7c7c7;
-        margin: 15px 0;
-      }
-
-      .leader-miguel {
-        font-size: 28px; 
-        font-weight: 400;
-        color: #797979;
-        max-width: 85%; 
-        margin: 0;
-      }
-
-      
-      .view-students-btn {
-        padding: 10px 20px;
-        background-color: #524f4c;
+      .upload-photo {
+        display: block;
+        margin: 0 auto;
+        padding: 8px 12px;
+        background-color: #f77f00;
         color: white;
-        font-size: 16px;
+        font-size: 14px;
         border: none;
         border-radius: 5px;
         cursor: pointer;
+        transition: background-color 0.3s ease;
       }
 
-      .view-students-btn:hover {
-        background-color: #7e7e7e;
+      .upload-photo:hover {
+        background-color: #e06b00;
+      }
+
+      .file-input {
+        display: none;
       }
     </style>
   </head>
-  
   <body>
     <div class="main-container">
-      <div class="wrapper">
-       
-        <span class="quem-somos">QUEM SOMOS ?</span>
-
-       
-        <div class="opium-group">
-          A OPIUM Group nasceu no curso de Desenvolvimento de Sistemas no SENAI, onde se viu a necessidade de procurarmos auxiliar ao avanço da
-          <span class="descarbonizacao">descarbonização. </span>Como temos meios e medidas de avançarmos, decidimos implementar em empresas estes mesmos meios.
+      <div class="title">Nossos Estudantes</div>
+      <div class="students-grid">
+        <!-- Estudante 1 -->
+        <div class="student-card">
+          <div class="student-photo" id="photo-1"></div>
+          <input type="file" id="file-1" class="file-input" accept="image/*" onchange="previewImage(event, 'photo-1')" />
+          <label for="file-1" class="upload-photo">Carregar Foto</label>
+          <div class="student-info">
+            <div class="student-name">Miguel Zacharias</div>
+          </div>
         </div>
 
-       
-        <span class="team">A EQUIPE</span>
-        <span class="leader-miguel">
-          Como líder, Miguel Zacharias desempenhou um papel produtivo e estratégico no projeto. Diego contribuiu com a criação do tema, sendo também co-criador das ideias principais, além da produção de paginas do site. Isabela foi responsável pela documentação detalhada do trabalho, garantindo organização e clareza. Guilherme Montes cuidou do desenvolvimento e gerenciamento dos logins, assegurando a funcionalidade técnica.
-        </span>
-      </div>
+        <!-- Estudante 2 -->
+        <div class="student-card">
+          <div class="student-photo" id="photo-2"></div>
+          <input type="file" id="file-2" class="file-input" accept="image/*" onchange="previewImage(event, 'photo-2')" />
+          <label for="file-2" class="upload-photo">Carregar Foto</label>
+          <div class="student-info">
+            <div class="student-name">Isabela Santos</div>
+          </div>
+        </div>
 
-    
-      <button class="view-students-btn" onclick="window.location.href='fotoestudantes.html';">Ver Estudantes</button>
+        <!-- Estudante 3 -->
+        <div class="student-card">
+          <div class="student-photo" id="photo-3"></div>
+          <input type="file" id="file-3" class="file-input" accept="image/*" onchange="previewImage(event, 'photo-3')" />
+          <label for="file-3" class="upload-photo">Carregar Foto</label>
+          <div class="student-info">
+            <div class="student-name">Diego Alves</div>
+          </div>
+        </div>
+
+        <!-- Estudante 4 -->
+        <div class="student-card">
+          <div class="student-photo" id="photo-4"></div>
+          <input type="file" id="file-4" class="file-input" accept="image/*" onchange="previewImage(event, 'photo-4')" />
+          <label for="file-4" class="upload-photo">Carregar Foto</label>
+          <div class="student-info">
+            <div class="student-name">Guilherme Montes</div>
+          </div>
+        </div>
+      </div>
     </div>
+
+    <script>
+      function previewImage(event, photoId) {
+        const file = event.target.files[0];
+        if (file) {
+          const reader = new FileReader();
+          reader.onload = function (e) {
+            const photo = document.getElementById(photoId);
+            photo.style.backgroundImage = `url(${e.target.result})`;
+            photo.style.backgroundSize = "cover";
+            photo.style.backgroundPosition = "center";
+          };
+          reader.readAsDataURL(file);
+        }
+      }
+    </script>
   </body>
 </html>
