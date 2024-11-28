@@ -18,19 +18,19 @@
         padding: 0;
         height: 100%;
         width: 100%;
-        overflow: hidden; /* Remove qualquer scroll */
-        background-color: #000000; /* Fundo preto */
+        overflow: hidden; 
+        background-color: #000000; 
         color: white;
-        font-family: Poppins, var(--default-font-family); /* Fonte padrão */
+        font-family: Poppins, var(--default-font-family); 
       }
 
       .main-container {
         min-height: 100vh;
         display: flex;
         flex-direction: column;
-        justify-content: space-between; /* Garante que o botão fique na parte inferior */
+        justify-content: space-between; 
         align-items: center;
-        padding: 15px; /* Reduzi o espaçamento interno */
+        padding: 15px; 
         box-sizing: border-box;
       }
 
@@ -38,13 +38,13 @@
         flex: 1;
         display: flex;
         flex-direction: column;
-        justify-content: center; /* Centraliza verticalmente */
+        justify-content: center; 
         align-items: center;
         text-align: center;
         width: 100%;
       }
 
-      /* Título Quem Somos */
+      
       .quem-somos {
         font-size: 60px;
         font-weight: 800;
@@ -52,36 +52,36 @@
         margin: 0;
       }
 
-      /* Descrição do Opium Group */
+      
       .opium-group {
-        font-size: 30px; /* Reduzi o tamanho ligeiramente */
+        font-size: 30px; 
         font-weight: 400;
         color: #797979;
         margin: 20px 0;
-        max-width: 85%; /* Reduzi o espaço ocupado pelo texto */
+        max-width: 85%; 
       }
 
       .descarbonizacao {
         font-weight: 800;
       }
 
-      /* Biografia da Equipe */
+      
       .team {
-        font-size: 30px; /* Reduzi o tamanho ligeiramente */
+        font-size: 30px; 
         font-weight: 800;
         color: #c7c7c7;
         margin: 15px 0;
       }
 
       .leader-miguel {
-        font-size: 28px; /* Reduzi o tamanho ligeiramente */
+        font-size: 28px; 
         font-weight: 400;
         color: #797979;
-        max-width: 85%; /* Reduzi o espaço ocupado pelo texto */
+        max-width: 85%; 
         margin: 0;
       }
 
-      /* Botão "Ver Estudantes" */
+      
       .view-students-btn {
         padding: 10px 20px;
         background-color: #524f4c;
@@ -100,24 +100,24 @@
   <body>
     <div class="main-container">
       <div class="wrapper">
-        <!-- Título Quem Somos -->
+       
         <span class="quem-somos">QUEM SOMOS ?</span>
 
-        <!-- Descrição do Opium Group -->
+       
         <div class="opium-group">
           A OPIUM Group nasceu no curso de Desenvolvimento de Sistemas no SENAI, onde se viu a necessidade de procurarmos auxiliar ao avanço da
           <span class="descarbonizacao">descarbonização. </span>Como temos meios e medidas de avançarmos, decidimos implementar em empresas estes mesmos meios.
         </div>
 
-        <!-- Biografia da Equipe -->
+       
         <span class="team">A EQUIPE</span>
         <span class="leader-miguel">
           Como líder, Miguel Zacharias desempenhou um papel produtivo e estratégico no projeto. Diego contribuiu com a criação do tema, sendo também co-criador das ideias principais, além da produção de paginas do site. Isabela foi responsável pela documentação detalhada do trabalho, garantindo organização e clareza. Guilherme Montes cuidou do desenvolvimento e gerenciamento dos logins, assegurando a funcionalidade técnica.
         </span>
       </div>
 
-      <!-- Botão "Ver Estudantes" -->
-      <button class="view-students-btn">Ver Estudantes</button>
+    
+      <button class="view-students-btn" onclick="window.location.href='fotoestudantes.html';">Ver Estudantes</button>
     </div>
   </body>
 </html>
