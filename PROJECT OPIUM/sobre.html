@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Estudantes</title>
+    <title>SOBRE</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;800&display=swap" />
     <style>
       :root {
@@ -18,152 +18,197 @@
         padding: 0;
         height: 100%;
         width: 100%;
+        overflow: hidden; /* Remove qualquer scroll */
         background-color: #000000; /* Fundo preto */
         color: white;
         font-family: Poppins, var(--default-font-family); /* Fonte padrão */
-        display: flex;
-        justify-content: center;
-        align-items: center;
       }
 
       .main-container {
-        max-width: 1200px;
-        width: 100%;
-        padding: 20px;
-        box-sizing: border-box;
+        min-height: 100vh;
         display: flex;
         flex-direction: column;
+        justify-content: space-between; /* Garante que o botão fique na parte inferior */
         align-items: center;
+        padding: 15px; /* Reduzi o espaçamento interno */
+        box-sizing: border-box;
       }
 
-      /* Título */
-      .title {
-        font-size: 50px;
+      .wrapper {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center; /* Centraliza verticalmente */
+        align-items: center;
+        text-align: center;
+        width: 100%;
+      }
+
+      /* Título Quem Somos */
+      .quem-somos {
+        font-size: 60px;
         font-weight: 800;
         color: #c7c7c7;
-        margin-bottom: 20px;
-        text-align: center;
+        margin: 0;
       }
 
-      /* Grade dos Estudantes */
-      .students-grid {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr); /* Dois por linha */
-        gap: 20px;
-        width: 100%;
+      /* Descrição do Opium Group */
+      .opium-group {
+        font-size: 30px; /* Reduzi o tamanho ligeiramente */
+        font-weight: 400;
+        color: #797979;
+        margin: 20px 0;
+        max-width: 85%; /* Reduzi o espaço ocupado pelo texto */
       }
 
-      .student-card {
-        background-color: #1e1e1e;
-        border-radius: 10px;
-        overflow: hidden;
-        text-align: center;
-        padding: 20px;
-        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
-      }
-
-      .student-photo {
-        width: 100%;
-        height: 250px;
-        object-fit: cover;
-        border-radius: 10px;
-        background-color: #333; /* Placeholder para foto */
-        margin-bottom: 10px;
-      }
-
-      .student-info {
-        margin-top: 10px;
-      }
-
-      .student-name {
-        font-size: 20px;
+      .descarbonizacao {
         font-weight: 800;
-        color: #f77f00;
-        margin-top: 5px;
       }
 
-      .upload-photo {
-        display: block;
-        margin: 0 auto;
-        padding: 8px 12px;
-        background-color: #f77f00;
+      /* Biografia da Equipe */
+      .team {
+        font-size: 30px; /* Reduzi o tamanho ligeiramente */
+        font-weight: 800;
+        color: #c7c7c7;
+        margin: 15px 0;
+      }
+
+      .leader-miguel {
+        font-size: 28px; /* Reduzi o tamanho ligeiramente */
+        font-weight: 400;
+        color: #797979;
+        max-width: 85%; /* Reduzi o espaço ocupado pelo texto */
+        margin: 0;
+      }
+
+      /* Botão "Ver Estudantes" */
+      .view-students-btn {
+        padding: 10px 20px;
+        background-color: #524f4c;
         color: white;
-        font-size: 14px;
+        font-size: 16px;
         border: none;
         border-radius: 5px;
         cursor: pointer;
-        transition: background-color 0.3s ease;
       }
 
-      .upload-photo:hover {
+      .view-students-btn:hover {
         background-color: #e06b00;
       }
+      header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: white;
+            padding: 0.1px 15px;
+            border-bottom: 2px solid white;
+        }
 
-      .file-input {
-        display: none;
-      }
+        .user-info {
+            font-size: 14px;
+            color: black;
+            text-align: right;
+            margin-left: auto; /* Alinha para a direita */
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: black;
+            padding: 20px 0;
+            width: 100%;
+        }
+
+        .menu {
+            display: grid;
+            grid-template-columns: repeat(15,auto);
+            justify-content: center;
+            align-items: center;
+            gap: 60px; /* Espaçamento maior entre os itens */
+        }
+
+        .menu a {
+            text-decoration: none;
+            color: white;
+            font-size: 16px;
+            font-weight: 400; /* Poppins Regular */
+        }
+
+        .filho1{
+            grid-column: 2;
+        }
+        .filho2{
+            grid-column: 4;
+        }
+        .filho3{
+            grid-column: 6;
+        }
+        .logo{
+            grid-column: 8;
+        }
+        .filho4{
+            grid-column: 10;
+        }
+        .filho5{
+            grid-column: 12;
+        }
+        .filho6{
+            grid-column: 14;
+        }
+
+        .logo img {
+            width: 100px; /* Ajuste da altura da logo */
+            height: auto;
+        }
+        a {
+            text-decoration: none;
+        }
     </style>
   </head>
   <body>
-    <div class="main-container">
-      <div class="title">Nossos Estudantes</div>
-      <div class="students-grid">
-        <!-- Estudante 1 -->
-        <div class="student-card">
-          <div class="student-photo" id="photo-1"></div>
-          <input type="file" id="file-1" class="file-input" accept="image/*" onchange="previewImage(event, 'photo-1')" />
-          <label for="file-1" class="upload-photo">Carregar Foto</label>
-          <div class="student-info">
-            <div class="student-name">Miguel Zacharias</div>
-          </div>
-        </div>
-
-        <!-- Estudante 2 -->
-        <div class="student-card">
-          <div class="student-photo" id="photo-2"></div>
-          <input type="file" id="file-2" class="file-input" accept="image/*" onchange="previewImage(event, 'photo-2')" />
-          <label for="file-2" class="upload-photo">Carregar Foto</label>
-          <div class="student-info">
-            <div class="student-name">Isabela Santos</div>
-          </div>
-        </div>
-
-        <!-- Estudante 3 -->
-        <div class="student-card">
-          <div class="student-photo" id="photo-3"></div>
-          <input type="file" id="file-3" class="file-input" accept="image/*" onchange="previewImage(event, 'photo-3')" />
-          <label for="file-3" class="upload-photo">Carregar Foto</label>
-          <div class="student-info">
-            <div class="student-name">Diego Alves</div>
-          </div>
-        </div>
-
-        <!-- Estudante 4 -->
-        <div class="student-card">
-          <div class="student-photo" id="photo-4"></div>
-          <input type="file" id="file-4" class="file-input" accept="image/*" onchange="previewImage(event, 'photo-4')" />
-          <label for="file-4" class="upload-photo">Carregar Foto</label>
-          <div class="student-info">
-            <div class="student-name">Guilherme Montes</div>
-          </div>
-        </div>
+    <header>
+      <div class="user-info">
+          <p><a href="Login_escolha.html">Olá, Faça seu login!</a><br><strong>Sua conta e doações.</strong></p>
       </div>
-    </div>
+  </header>
+  <nav>
+      <div class="menu">
+          <a class="filho1" href="pagina_ajuda.html">AJUDA</a>
+          <a class="filho2" href="pagina_ranking.html">RANKING</a>
+          <a class="filho3" href="PAGINA.html">COMBATENDO</a>
+          <div class="logo">
+              <img src="../SITE/MIDIA/OPIUM.png" alt="Logo">
+          </div>
+          <a class="filho4" href="loja.html">MERCHANDISING</a>
+          <a class="filho5" href="pagina_doacao.html">DOAÇÃO</a>
+          <a class="filho6" href="sobre.html">SOBRE</a>
+      </div>
+  </nav>
+  <nav>
+    <div class="main-container">
+      <div class="wrapper">
+        <!-- Título Quem Somos -->
+        <span class="quem-somos">QUEM SOMOS ?</span>
 
-    <script>
-      function previewImage(event, photoId) {
-        const file = event.target.files[0];
-        if (file) {
-          const reader = new FileReader();
-          reader.onload = function (e) {
-            const photo = document.getElementById(photoId);
-            photo.style.backgroundImage = `url(${e.target.result})`;
-            photo.style.backgroundSize = "cover";
-            photo.style.backgroundPosition = "center";
-          };
-          reader.readAsDataURL(file);
-        }
-      }
-    </script>
+        <!-- Descrição do Opium Group -->
+        <div class="opium-group">
+          A OPIUM Group nasceu no curso de Desenvolvimento de Sistemas no SENAI, onde se viu a necessidade de procurarmos auxiliar ao avanço da
+          <span class="descarbonizacao">descarbonização. </span>Como temos meios e medidas de avançarmos, decidimos implementar em empresas estes mesmos meios.
+        </div>
+        <p><br></p>
+
+        <!-- Biografia da Equipe -->
+        <span class="team">A EQUIPE</span>
+        <span class="leader-miguel">
+          Como líder, Miguel Zacharias desempenhou um papel produtivo e estratégico no projeto. Diego contribuiu com a criação do tema, sendo também co-criador das ideias principais, além da produção de paginas do site. Isabela foi responsável pela documentação detalhada do trabalho, garantindo organização e clareza. Guilherme Montes cuidou do desenvolvimento e gerenciamento dos logins, assegurando a funcionalidade técnica.
+        </span>
+      </div>
+
+      <!-- Botão "Ver Estudantes" -->
+      <button class="view-students-btn">Ver Estudantes</button>
+    </div>
+  </nav>
   </body>
 </html>
+
