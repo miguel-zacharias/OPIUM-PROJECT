@@ -63,12 +63,19 @@
       }
 
       .student-photo {
-        width: 100%;
-        height: 250px;
-        object-fit: cover;
+        width: 200px; /* Largura fixa */
+        height: 250px; /* Altura fixa */
+        margin: 0 auto;
+        overflow: hidden;
         border-radius: 10px;
-        background-color: #333; /* Placeholder para foto */
-        margin-bottom: 10px;
+        background-color: #333;
+      }
+
+      .student-photo img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* Garante que a imagem cubra o espaço */
+        object-position: center;
       }
 
       .student-info {
@@ -78,29 +85,8 @@
       .student-name {
         font-size: 20px;
         font-weight: 800;
-        color: #f77f00;
+        color: #939393;
         margin-top: 5px;
-      }
-
-      .upload-photo {
-        display: block;
-        margin: 0 auto;
-        padding: 8px 12px;
-        background-color: #f77f00;
-        color: white;
-        font-size: 14px;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-        transition: background-color 0.3s ease;
-      }
-
-      .upload-photo:hover {
-        background-color: #e06b00;
-      }
-
-      .file-input {
-        display: none;
       }
     </style>
   </head>
@@ -110,9 +96,9 @@
       <div class="students-grid">
         <!-- Estudante 1 -->
         <div class="student-card">
-          <div class="student-photo" id="photo-1"></div>
-          <input type="file" id="file-1" class="file-input" accept="image/*" onchange="previewImage(event, 'photo-1')" />
-          <label for="file-1" class="upload-photo">Carregar Foto</label>
+          <div class="student-photo">
+            <img src="../SITE/MIDIA/miguelfoto.png" alt="Foto de Miguel Zacharias" />
+          </div>
           <div class="student-info">
             <div class="student-name">Miguel Zacharias</div>
           </div>
@@ -120,19 +106,19 @@
 
         <!-- Estudante 2 -->
         <div class="student-card">
-          <div class="student-photo" id="photo-2"></div>
-          <input type="file" id="file-2" class="file-input" accept="image/*" onchange="previewImage(event, 'photo-2')" />
-          <label for="file-2" class="upload-photo">Carregar Foto</label>
+          <div class="student-photo">
+            <img src="../SITE/MIDIA/isabelafoto.png" alt="Foto de Isabela Carvalho" />
+          </div>
           <div class="student-info">
-            <div class="student-name">Isabela Santos</div>
+            <div class="student-name">Isabela Carvalho</div>
           </div>
         </div>
 
         <!-- Estudante 3 -->
         <div class="student-card">
-          <div class="student-photo" id="photo-3"></div>
-          <input type="file" id="file-3" class="file-input" accept="image/*" onchange="previewImage(event, 'photo-3')" />
-          <label for="file-3" class="upload-photo">Carregar Foto</label>
+          <div class="student-photo">
+            <img src="../SITE/MIDIA/diegofoto.png" alt="Foto de Diego Alves" />
+          </div>
           <div class="student-info">
             <div class="student-name">Diego Alves</div>
           </div>
@@ -140,30 +126,14 @@
 
         <!-- Estudante 4 -->
         <div class="student-card">
-          <div class="student-photo" id="photo-4"></div>
-          <input type="file" id="file-4" class="file-input" accept="image/*" onchange="previewImage(event, 'photo-4')" />
-          <label for="file-4" class="upload-photo">Carregar Foto</label>
+          <div class="student-photo">
+            <img src="../SITE/MIDIA/guilhermefoto.png" alt="Foto de Guilherme Montes" />
+          </div>
           <div class="student-info">
             <div class="student-name">Guilherme Montes</div>
           </div>
         </div>
       </div>
     </div>
-
-    <script>
-      function previewImage(event, photoId) {
-        const file = event.target.files[0];
-        if (file) {
-          const reader = new FileReader();
-          reader.onload = function (e) {
-            const photo = document.getElementById(photoId);
-            photo.style.backgroundImage = `url(${e.target.result})`;
-            photo.style.backgroundSize = "cover";
-            photo.style.backgroundPosition = "center";
-          };
-          reader.readAsDataURL(file);
-        }
-      }
-    </script>
   </body>
 </html>

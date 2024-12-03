@@ -7,12 +7,12 @@
     <link rel="icon" href="../SITE/MIDIA/FAVORITO.png" image.png>
 
     <style>
-       
+        /* Estilo existente */
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap');
         body {
             margin: 0;
             font-family: "Poppins", sans-serif;
-            font-weight: 400; 
+            font-weight: 400; /* Poppins Regular */
             font-style: normal;
             background-color: black;
             color: white;
@@ -31,12 +31,12 @@
             font-size: 14px;
             color: black;
             text-align: right;
-            margin-left: auto; 
+            margin-left: auto; /* Alinha para a direita */
         }
 
         .user-info a {
-            color: black; 
-            text-decoration: none; 
+            color: black; /* Define a cor preta para o link */
+            text-decoration: none; /* Remove sublinhado */
         }
 
         nav {
@@ -60,7 +60,7 @@
             text-decoration: none;
             color: white;
             font-size: 16px;
-            font-weight: 400; 
+            font-weight: 400; /* Poppins Regular */
         }
 
         .filho1 {
@@ -100,16 +100,16 @@
             text-decoration: none;
         }
 
-       
+        /* Estilos da seção de data */
         .date-section {
             margin: 20px;
-            text-align: left;
+            text-align: left; /* Alinha à esquerda */
         }
 
         .years {
             display: flex;
-            gap: 5px; 
-            margin-bottom: 10px; 
+            gap: 5px; /* Reduz o espaçamento entre os anos */
+            margin-bottom: 10px; /* Reduz a margem abaixo dos botões de ano */
         }
 
         .year-button input[type="radio"] {
@@ -117,11 +117,11 @@
         }
 
         .year-button label {
-            padding: 5px 10px; 
+            padding: 5px 10px; /* Reduz o tamanho dos botões */
             border: 1px solid white;
             border-radius: 5px;
             cursor: pointer;
-            font-size: 14px; 
+            font-size: 14px; /* Texto menor */
         }
 
         .year-button input[type="radio"]:checked + label {
@@ -130,8 +130,8 @@
         }
 
         .month-select {
-            font-size: 14px; 
-            padding: 5px; 
+            font-size: 14px; /* Texto menor */
+            padding: 5px; /* Reduz o espaçamento interno */
             border-radius: 5px;
             border: 1px solid white;
             background-color: black;
@@ -142,7 +142,7 @@
 <body>
     <header>
         <div class="user-info">
-            <p><a href="Login_escolha.html">Olá, Faça seu login!</a><br><strong>Sua conta e doações.</strong></p>
+            <p><a href="Login_escolha.html">Olá, Celso!</a><br><strong>Sua conta e doações.</strong></p>
         </div>
     </header>   
     <nav>
@@ -151,13 +151,17 @@
             <a class="filho2" href="pagina_ranking.html">RANKING</a>
             <a class="filho3" href="pagina.html">COMBATENDO</a>
             <div class="logo">
-                <img src="OPIUM.png" alt="Logo">
+                <img src="../SITE/MIDIA/OPIUM.png" alt="Logo">
             </div>
+        
             <a class="filho4" href="pagina_merchandising.html">MERCHANDISING</a>
             <a class="filho5" href="pagina_doacao.html">DOAÇÃO</a>
             <a class="filho6" href="pagina_sobre.html">SOBRE</a>
         </div>
     </nav>
+    
+
+    <!-- Seção de Data -->
     <div class="date-section">
         <div class="years">
             <div class="year-button">
@@ -173,7 +177,7 @@
                 <label for="year-2025">2025</label>
             </div>
         </div>
-
+     
         <select class="month-select">
             <option value="Janeiro">Janeiro</option>
             <option value="Fevereiro">Fevereiro</option>
@@ -189,7 +193,7 @@
             <option value="Dezembro">Dezembro</option>
         </select>
     </div>
+    <img src="../SITE/MIDIA/_(1636 x 731 px).mp4" alt="RANKING">
+</div>
 </body>
 </html>
-
-
