@@ -85,22 +85,22 @@
     <label for="cvv">Código de segurança (CVV)</label>
     <input type="text" id="cvv" placeholder="123" maxlength="3" oninput="this.value = this.value.replace(/[^0-9]/g, '')">
 
-    <!-- Botão de pagamento -->
+   
     <button class="pay-button" id="pay-button" onclick="confirmPayment()">Pagar</button>
     
-    <!-- Botão para gerar QR Code -->
+    
     <button class="qr-button" id="qr-button" onclick="generateQRCode()">Gerar QR Code</button>
   </div>
 
   <script>
     function formatCardNumber(input) {
       input.value = input.value
-        .replace(/\D/g, '') // Remove qualquer caractere não numérico
-        .replace(/(\d{4})(?=\d)/g, '$1 '); // Adiciona um espaço a cada 4 dígitos
+        .replace(/\D/g, '')
+        .replace(/(\d{4})(?=\d)/g, '$1 ');
     }
 
     function formatBirthDate(input) {
-      let value = input.value.replace(/\D/g, ''); // Remove tudo que não é número
+      let value = input.value.replace(/\D/g, ''); 
       if (value.length >= 2) {
         value = value.slice(0, 2) + '/' + value.slice(2);
       }
@@ -123,26 +123,24 @@
     }
 
     function confirmPayment() {
-      // Aqui você pode adicionar a lógica para processar o pagamento
+    
       const cardNumber = document.getElementById("card-number").value;
       const cvv = document.getElementById("cvv").value;
       const birthDate = document.getElementById("birth-date").value;
 
-      // Simulação de pagamento (caso os dados sejam válidos)
       if (cardNumber && cvv && birthDate) {
         alert("Pagamento processado com sucesso!");
-        window.location.href = 'confirmação.html'; // Redireciona para a página de sucesso
+        window.location.href = 'confirmação.html'; 
       } else {
         alert("Por favor, preencha todos os campos corretamente.");
       }
     }
 
-    // Função para gerar QR Code
+
     function generateQRCode() {
-      // Aqui você pode adicionar a lógica para gerar um QR Code
-      // Para este exemplo, vamos simular o processo de exibição do QR Code com um alerta
+     
       alert("QR Code gerado com sucesso! (Aqui poderia estar o QR Code real)");
-      // Redireciona para a página do QR Code (substitua pelo link real se necessário)
+      
       window.location.href = 'qr-code.html';
     }
   </script>
